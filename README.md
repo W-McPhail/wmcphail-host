@@ -1,2 +1,1 @@
-# wmcphail-host
-Personal website
+w-mcphail.

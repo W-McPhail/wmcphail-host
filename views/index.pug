@@ -1,0 +1,164 @@
+extends layout
+
+block content
+  head
+    title William Merritt McPhail
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='description', content='Simple full-stack developer CV/Resume bootstrap template')
+    // Styles
+    link(rel='stylesheet', media='all', href='./dist/css/paper.css')
+    // /Styles
+    // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js')
+      script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+  body(data-spy='scroll', data-target='#resumeNavigationScrollSpy', data-offset='70')
+    .container-fluid
+      .row
+        .col-xs-12.col-sm-4.col-md-3.resume-profile
+          img.img-thumbnail(width='250', src='./images/face.jpg', alt='TheTurtleChief')
+          h1
+            | William Merritt McPhail
+            small.text-muted
+              | Full-Stack Developer and Software Engineer
+          ul.list-unstyled
+            li Location: NYC
+            li
+              | Email:
+              a(href='mailto://william.m.mcphail@gmail.com') william.m.mcphail@gmail.com
+            li
+              | Tel:
+              a(href='tel://+19148061544') +1 914-806-1544
+          ul.list-unstyled
+            li
+              | Github:
+              a(href='https://github.com/w-mcphail', target='_blank') @w-mcphail
+        // /.resume-profile
+        .col-xs-12.col-sm-8.col-md-6.resume-info
+          section.resume-info-section
+            h2#introduction Introduction
+            p.lead.text-justify
+              | My name is William McPhail. I code in NodeJS, HTML/CSS, Java, Python, Swift, C, and C++. I am familiar with MongoDB, SQL, Parse, and Firebase for databases.
+          section.resume-info-section
+            h2#education Education
+            .resume-info-section-block
+              h4
+               | CUNY Hunter College (Current)
+               small - Calculus II, Discrete Mathematics
+              h4
+                | New York University (NYU - 2020-2021)
+                small - Data Structures and Computer Systems Organization. Also studied classics and the Hellenistic world.
+          section.resume-info-section
+            h2#experience Experience
+            .resume-info-section-block
+              h4
+                | Foodbank App (iOS):
+                small - Meal tracking app designed for FoodBanks to know how many people they are serving daily. Native iOS Version in Swift and Parse.
+                small - Important for establishing federal and state grants.
+              h4
+                | Building Web Applications Using Python - Columbia University
+                small - Gained experience designing full-stack websites using Python, HTML, CSS, and JS; Database - SQL.
+              h4
+                | Midnight Run - Rye Country Day School
+                small - President of the Midnight Run club, organized 30 students to distribute aid to the homeless population of NYC.
+                small - Fundraised over $5k, including applying for and receiving a grant.
+              h4
+                | Squash Team Captain - Rye Country Day School
+                small - Metropolitan Independent Football League Champion.
+              h4
+                | Coding For A Cause, Rye Country Day School (1-4 years cycle)
+                small - Developed a meal tracking system for Caritas Soup Kitchen and Food Pantry in Port Chester using Node JS Express.
+                small - Gained experience in front-end and back-end development while working in a scrum/ agile team.
+              h4
+                | UPS
+                small - Package handler loading up trucks for deliveries in the White Plains warehouse.
+              h4
+                | Golf Caddy
+                small - Apawamis Golf Club
+              h4
+                | Greenwich Bicycles (seasonal employeee)
+                small - Customer service
+              h4
+                | Arader Galleries (gallery assistant)
+                small - Winter Auction sales over 1mm. Appraisals of rare maps and fine art.
+          section.resume-info-section.tools-and-tech
+            h2#tools-and-technologies Tools & Technologies
+            .resume-info-section-block
+              h4 Back End Coding, Tools & Frameworks
+              ul.list-unstyled.tag-list
+                li Node.js
+                li Swift
+                li Java
+                li Python
+                li C
+                li C++
+                li MongoDB
+                li SQL
+            .resume-info-section-block
+              h4 Front End Coding, Tools & Frameworks
+              ul.list-unstyled.tag-list
+                li HTML & HTML5
+                li CSS & CSS3
+                li Javscript
+                li JQuery
+            .resume-info-section-block
+              h4 IDE's
+              ul.list-unstyled.tag-list
+                li Jet-brains Software.
+                li X-Code
+            .resume-info-section-block
+              h4 Version Control - VCS
+              ul.list-unstyled.tag-list
+                li Git
+          section.resume-info-section
+            h2#skills Skills
+            ul.list-unstyled.skill-list
+              li
+                | Back End Coding; Database Manager and Consultant
+                .progress
+                  .progress-bar.progress-bar-info(role='progressbar', aria-valuenow='90', aria-valuemin='0', aria-valuemax='100', style='width:96.4%')
+                    span.sr-only 80%
+              li
+                | Front-end and Design
+                .progress
+                  .progress-bar.progress-bar-info(role='progressbar', aria-valuenow='99.4', aria-valuemin='0', aria-valuemax='100', style='width:99.4%')
+                    span.sr-only 65%
+              li
+                | Spanish
+                .progress
+                  .progress-bar.progress-bar-info(role='progressbar', aria-valuenow='96', aria-valuemin='0', aria-valuemax='100', style='width:100%')
+                    span.sr-only 80%
+          section.resume-info-section
+            h2#awards Awards
+            h4 Oberlin College Book Award, Rye Country Day School
+              small  - Awarded to two students for excellence in English.
+            h4 National Spanish Exam
+              small  - (x3 Silver Award Winner) - Earned a 5 on the AP Spanish Literature and Culture exam.
+        // /.resume-info
+        #resumeNavigationScrollSpy.col-md-3
+          ul.nav.nav.nav-pills.nav-stacked.resume-navigation.hidden-print.hidden-sm.hidden-xs(data-spy='affix', data-offset-top='0')
+            li
+              a(href='#introduction') Introduction
+            li
+              a(href='#education') Education
+            li
+              a(href='#experience') Experience
+            li
+              a(href='#tools-and-technologies') Tools & Technologies
+            li
+              a(href='#skills') Skills
+            li
+              a(href='#awards') Awards
+          // /.resume-navigation
+          // /#resumeNavigationScrollSpy
+          // /.row
+          // /.Container
+          // Javascript
+          script(type='text/javascript', src='./dist/js/app.js')
+          // /Javscript
+
+          //Rap
+            //http://localhost:1024/
